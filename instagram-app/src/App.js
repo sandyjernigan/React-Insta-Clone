@@ -25,3 +25,6 @@ class App extends Component {
 }
 
 export default App;
+
+// The root App component of your application should import the dummy data from the dummy-data.js file and 
+// iterate over said data, passing each individual object as a prop to an instance of PostContainer.

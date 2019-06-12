@@ -1,6 +1,5 @@
 import React from 'react';
-
-// Each PostContainer component will then pass the array of comments on each post object as a prop to an instance of the CommentSection component
+import CommentSection from '../CommentSection/CommentSection'
 
 function PostContainer(props) {
     return (
@@ -11,3 +10,6 @@ function PostContainer(props) {
 }
 
 export default PostContainer;
+
+// Each PostContainer component will then pass the array of comments on each post object 
+// as a prop to an instance of the CommentSection component.
