@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { dummyData } from 'dummy-data';
+// import { render } from 'react-dom';
+import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import './App.css';
 
@@ -14,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {data.map( post => {
+        {this.state.data.map( post => {
             return (
             <PostContainer post={post} />
         );})}
