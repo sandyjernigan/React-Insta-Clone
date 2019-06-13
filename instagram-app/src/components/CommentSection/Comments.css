@@ -1,0 +1,15 @@
+.CommentSection {
+    font-size: 0.8rem;
+}
+
+    .comment {
+        margin: 5px;
+    }
+    .comment .username {
+        color: darkslategray;
+        font-weight: bold;
+    }
+
+    .CommentSection form {
+        margin: 10px;
+    }

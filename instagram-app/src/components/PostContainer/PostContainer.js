@@ -8,10 +8,12 @@ function PostContainer(props) {
         <div className="PostContainer">
             <PostUser thumbnail={props.post.thumbnailUrl} username={props.post.username} />
 
-            <img alt="Post Image" className="postImage" 
+            <img alt="Post" className="postImage" 
                 src={props.post.imageUrl} />
 
             <CommentSection comments={props.post.comments} />
+            
+            <span className="timestamp">{props.post.timestamp}</span>
         </div>
     );
 }

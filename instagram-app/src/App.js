@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { render } from 'react-dom';
+// import PropTypes from 'prop-types';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import './App.css';
