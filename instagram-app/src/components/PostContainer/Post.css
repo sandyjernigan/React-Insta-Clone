@@ -1,0 +1,25 @@
+.PostContainer {
+    max-width: 500px;
+    border: 1px solid black;
+    margin: 50px;
+}
+
+    .PostUser {
+        display: flex;
+        align-content: center;
+        margin: 10px;
+    }
+        .PostUser .thumbnail {
+            width: 40px;
+            margin: 0 10px;
+            border-radius: 50%;
+        }
+
+        .PostUser .username {
+            align-self: center;
+        }
+
+    .postImage {
+        width: 98%;
+        margin: 1%;
+    }
