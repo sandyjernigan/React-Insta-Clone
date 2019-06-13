@@ -1,9 +1,13 @@
 import React from 'react';
+import Comment from './Comment';
 
 function PostContainer(props) {
     return (
         <div className="CommentSection">
-            <CommentSection comments={props.comments} />
+            {props.list.map( each => {
+                return (
+                    <Comment comment={each} />
+            );})}
         </div>
     );
 }
