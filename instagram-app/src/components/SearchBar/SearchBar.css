@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap');
+
+.Search {
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+}
+  .logoText {
+    font-family: 'Oleo Script', cursive;
+  }
+
+  i {
+    margin: 5px;
+  }
