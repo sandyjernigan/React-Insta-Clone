@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
+import dummyData from './dummy-data';
+import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
 import './App.css';
+import './fontawesome/css/all.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: dummyData
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <SearchBar />
+        {this.state.data.map( (post, i) => {
+            return (
+            <PostContainer post={post} key={i} />
+        );})}
+      </div>
+    );
+  }
 }
 
 export default App;
+
+// The root App component of your application should import the dummy data from the dummy-data.js file and 
+// iterate over said data, passing each individual object as a prop to an instance of PostContainer.
+
+// Be sure to check the Types of the data you are passing around as props in the components 
+// that will be using props to present data as DOM elements. 
+// This should be linked to your Comment component that Comment Section will render and 
+// potentially to your Post component that Post Container will render.
