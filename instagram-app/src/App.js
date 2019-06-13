@@ -15,9 +15,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.data.map( post => {
+        {this.state.data.map( (post, i) => {
             return (
-            <PostContainer post={post} />
+            <PostContainer post={post} key={i} />
         );})}
       </div>
     );

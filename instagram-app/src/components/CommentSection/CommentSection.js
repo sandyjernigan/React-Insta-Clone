@@ -4,9 +4,9 @@ import Comment from './Comment';
 function PostContainer(props) {
     return (
         <div className="CommentSection">
-            {props.list.map( each => {
+            {props.comments.map( (each, i) => {
                 return (
-                    <Comment comment={each} />
+                    <Comment comment={each} key={i} />
             );})}
         </div>
     );
