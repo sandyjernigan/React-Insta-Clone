@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+import CommentInput from './CommentInput'
 
 function PostContainer(props) {
     return (
@@ -8,6 +9,7 @@ function PostContainer(props) {
                 return (
                     <Comment comment={each} key={i} />
             );})}
+        <CommentInput />
         </div>
     );
 }
