@@ -20,6 +20,21 @@ class CommentSection extends React.Component {
         };
     }
 
+    // Create a function in CommentSection.js called addNewComment that takes in an event and an index number. 
+    // The function will add the comment that is on the event object to the post that is at that index number.
+    // Pass the addNewComment function down the component tree to where ever you have your 'Add a comment...' input.
+    addNewComment = (commentUsername, commentInputText) => {
+        const newComment = {
+            id: this.state.comments.length, 
+            username: commentUsername, 
+            text: commentInputText
+          } 
+          console.log(newComment);
+
+        this.setState({
+            comments: [...this.state.comments, newComment] });
+    }
+
     render() {
         return (
             <div className="CommentSection">
@@ -27,7 +42,7 @@ class CommentSection extends React.Component {
                     return (
                         <Comment comment={each} key={i} />
                 );})}
-            <CommentInput />
+            <CommentInput addNewComment={this.addNewComment} />
             </div>
         );
     }

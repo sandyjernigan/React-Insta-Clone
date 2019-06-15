@@ -3,7 +3,8 @@ import React from 'react';
 function CommentInput(props) {
   return (
     <form>
-        <input type="text" placeholder="Add a comment..." />
+        <input id="commentInputText" type="text" placeholder="Add a comment..." />
+        <input id="commentUsername" type="hidden" value="anonymousUser" />
         <input type="button" value="Submit" />
     </form>
   );
