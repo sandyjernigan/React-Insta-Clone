@@ -15,13 +15,14 @@ class App extends Component {
   componentDidMount() {
     this.setState({data: dummyData});
   }
-
-  searchPosts(phrase) {
+  
+  searchPosts = phrase => {
+    var test ="philz";
     // Filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data.
     const searchResults = this.state.data.filter( post => {
-      if (post.username.includes(phrase)) { return post; }
+      if (post.username.includes(test)) { return post; }
     })
-    this.setState({data: dummyData});
+    this.setState({data: searchResults});
   }
 
   // The root App component of your application should import the dummy data from the dummy-data.js file and 
