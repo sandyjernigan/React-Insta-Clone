@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PostUser from './PostUser';
+import PostLikes from './PostLikes';
 import PostTimeStamp from './PostTimeStamp';
 import CommentSection from '../CommentSection/CommentSection'
 import './Post.css';
@@ -16,9 +17,11 @@ function PostContainer(props) {
             <img alt="Post" className="postImage" 
                 src={props.post.imageUrl} />
 
-            <CommentSection comments={props.post.comments} />
-            
-            <PostTimeStamp timestamp={props.post.timestamp} />
+            <div className="postContent">
+                <PostLikes likes={props.post.likes} />
+                <CommentSection comments={props.post.comments} />
+                <PostTimeStamp timestamp={props.post.timestamp} />
+            </div>
         </div>
     );
 }
