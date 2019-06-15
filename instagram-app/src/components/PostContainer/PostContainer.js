@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PostUser from './PostUser';
 import PostTimeStamp from './PostTimeStamp';
 import CommentSection from '../CommentSection/CommentSection'
@@ -18,6 +19,18 @@ function PostContainer(props) {
         </div>
     );
 }
+
+PostContainer.propTypes = {
+    post: PropTypes.shape({ 
+        id: PropTypes.string, 
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string, 
+        imageUrl: PropTypes.string, 
+        likes: PropTypes.number, 
+        timestamp: PropTypes.string, 
+        comments: PropTypes.array
+    })
+};
 
 export default PostContainer;
 

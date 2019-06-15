@@ -5,7 +5,7 @@ function SearchBar(props) {
     return (
         <div className="Search">
             <div className="logo">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
                 <span className="logoText">Instagram</span>
             </div>
             <div className="SearchBar">

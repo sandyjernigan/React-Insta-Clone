@@ -1,5 +1,5 @@
 import React from 'react';
-import Moment from "moment";
+// import Moment from "moment";
 import './Post.css';
 
 function PostTimeStamp(props) {
