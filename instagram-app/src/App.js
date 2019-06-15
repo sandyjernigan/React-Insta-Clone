@@ -16,13 +16,21 @@ class App extends Component {
     this.setState({data: dummyData});
   }
 
+  searchPosts(phrase) {
+    // Filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data.
+    const searchResults = this.state.data.filter( post => {
+      if (post.username.includes(phrase)) { return post; }
+    })
+    this.setState({data: dummyData});
+  }
+
   // The root App component of your application should import the dummy data from the dummy-data.js file and 
   // iterate over said data, passing each individual object as a prop to an instance of PostContainer.
   // Use the state object to pass data to your PostContainer component.
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar searchPosts={this.searchPosts} />
         {this.state.data.map( (post, i) => {
             return (
             <PostContainer post={post} key={i} />

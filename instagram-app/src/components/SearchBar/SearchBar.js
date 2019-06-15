@@ -1,6 +1,8 @@
 import React from 'react';
 import './SearchBar.css';
 
+// Send state to App to filter by search input.
+
 class SearchBar extends React.Component{
     constructor(props){
         super(props);
@@ -16,8 +18,8 @@ class SearchBar extends React.Component{
   
     submitHandler = event => {
         event.preventDefault();
-        console.log("submit: " + this.state.search );
-        this.props.addNewComment(this.state.search);
+        console.log("search for: " + this.state.search );
+        this.props.searchPosts(this.state.search);
         this.setState({ search: '' });
     };
   
