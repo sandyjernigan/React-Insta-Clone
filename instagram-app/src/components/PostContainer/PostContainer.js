@@ -1,5 +1,6 @@
 import React from 'react';
 import PostUser from './PostUser';
+import PostTimeStamp from './PostTimeStamp';
 import CommentSection from '../CommentSection/CommentSection'
 import './Post.css';
 
@@ -13,7 +14,7 @@ function PostContainer(props) {
 
             <CommentSection comments={props.post.comments} />
             
-            <span className="timestamp">{props.post.timestamp}</span>
+            <PostTimeStamp timestamp={props.post.timestamp} />
         </div>
     );
 }
