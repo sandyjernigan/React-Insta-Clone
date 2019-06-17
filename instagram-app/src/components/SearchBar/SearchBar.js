@@ -15,12 +15,11 @@ class SearchBar extends React.Component{
         console.log("change search: " + event.target.value );
         this.props.searchPosts(this.state.search);
         this.setState({ search: event.target.value });
-        console.log("test change");
     };
   
     submitHandler = event => {
         event.preventDefault();
-        console.log("search for: " + this.state.search );
+        console.log("SUBMIT search for: " + this.state.search );
         this.props.searchPosts(this.state.search);
         this.setState({ search: '' });
     };
@@ -38,7 +37,11 @@ class SearchBar extends React.Component{
                 </div>
                 <div className="SearchBar">
                     <form onSubmit={this.state.search !== '' ? this.submitHandler : this.noChange} >
-                        <input type="text" placeholder="Search" />
+                        <input type="text" 
+                            placeholder="Search"
+                            onChange={this.changeHandler}
+                            value={this.state.search}
+                             />
                     </form>
                 </div>
                 <div className="SearchIcons">
