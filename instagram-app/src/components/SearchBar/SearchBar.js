@@ -12,14 +12,11 @@ class SearchBar extends React.Component{
     }
   
     changeHandler = event => {
-        console.log("change search: " + event.target.value );
-        this.props.searchPosts(this.state.search);
         this.setState({ search: event.target.value });
     };
   
     submitHandler = event => {
         event.preventDefault();
-        console.log("SUBMIT search for: " + this.state.search );
         this.props.searchPosts(this.state.search);
         this.setState({ search: '' });
     };
