@@ -8,7 +8,10 @@ import './fontawesome/css/all.css';
 class App extends Component {
   constructor() {
     super();
-    this.state = { data: [] };
+    this.state = { 
+      data: [],
+      filteredData: []
+    };
   }
 
   // In app.js use componentDidMount() to set your data to the component's state. 
@@ -17,12 +20,16 @@ class App extends Component {
   }
   
   searchPosts = phrase => {
-    var test ="philz";
+    var testSearch ="philz";
     // Filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data.
     const searchResults = this.state.data.filter( post => {
-      if (post.username.includes(test)) { return post; }
+      if (post.username.includes(testSearch)) { return post; }
+      else { return null; }
     })
-    this.setState({data: searchResults});
+    this.setState({filteredData: searchResults});
+    this.state.filteredData.length > 0 
+      ? this.setState({data: searchResults}) 
+      : this.setState({filteredData: searchResults})
   }
 
   // The root App component of your application should import the dummy data from the dummy-data.js file and 

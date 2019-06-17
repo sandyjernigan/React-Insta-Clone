@@ -13,7 +13,9 @@ class SearchBar extends React.Component{
   
     changeHandler = event => {
         console.log("change search: " + event.target.value );
+        this.props.searchPosts(this.state.search);
         this.setState({ search: event.target.value });
+        console.log("test change");
     };
   
     submitHandler = event => {
