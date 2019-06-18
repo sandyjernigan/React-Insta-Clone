@@ -20,7 +20,6 @@ class App extends Component {
   }
   
   searchPosts = phrase => {
-    console.log("Search for Phrase: " + phrase );
     // Filter out any post whose username doesn't match the search term passed in, then update the state with the resulting data.
     const searchResults = this.state.data.filter( post => {
       if (post.username.includes(phrase)) { return post;  }

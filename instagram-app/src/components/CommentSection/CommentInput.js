@@ -10,13 +10,11 @@ class CommentInput extends React.Component{
   }
   
   changeHandler = event => {
-      console.log("change comment: " + event.target.value );
       this.setState({ comment: event.target.value });
   };
 
   submitHandler = event => {
       event.preventDefault();
-      console.log("submit: " + this.state.comment );
       this.props.addNewComment(this.state.comment);
       this.setState({ comment: '' });
   };
